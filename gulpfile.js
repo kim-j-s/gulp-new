@@ -15,6 +15,8 @@ const options = require("./config");
 const fileinclude = require('gulp-file-include'); 
 // 배포 시 html 정리
 const prettyHtml = require('gulp-pretty-html');
+// 배포 시 html 정리
+const beautify = require('gulp-beautify');
 // npm sass
 const sass = require('gulp-sass')(require('sass'));
 // -webkit
@@ -47,9 +49,6 @@ function previewReload(done) {
 }
 
 function devHTML() {
-  const options = {
-    indentSize: 2
-  }
   return src([
       `${options.paths.src.base}/**/*.html`,
       `!${options.paths.src.base}/**/_*.html`
@@ -58,10 +57,11 @@ function devHTML() {
       prefix: '@@',
       basepath: options.paths.src.includeHtml
     }))
-    .pipe(prettyHtml({
-			indent_size: 2,
-			indent_with_tabs: true
-		}))
+    // .pipe(prettyHtml({
+		// 	indent_size: 2,
+		// 	indent_with_tabs: true
+		// }))
+    .pipe(beautify.js({ indent_size: 2 }))
     .pipe( cache('html') ) 
     .pipe(dest(options.paths.dist.base))
     .pipe(count('<%= counter %> HTML files', {logFiles: true}));
