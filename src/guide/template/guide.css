@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 0;
+    padding: 60px 20px;
+    font-size: 16px;
+}
+
+h1.guideTitleh1 {
+    font-size: 30px;
+    padding: 0 20px;
+}
+
+h2.guideTitleh2 {
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px dashed #666;
+    font-size: 20px;
+}
+
+.maping {
+    position: fixed;
+    z-index: 1000;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    padding-bottom: 0;
+    border: 1px solid blue;
+    background: #fff;
+}
+
+.maping a {
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 5px;
+    border: 1px solid #333;
+}
+.guideElement {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #e3e3e3;
+}

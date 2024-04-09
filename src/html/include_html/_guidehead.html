@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>공통 템플릿</title>
+
+  <link href="guide.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
+	<script src="../../js/libs/jquery-1.9.1.js"></script>
+
+	<script>
+		(function($){
+			$(function(){
+				let gBox = `<div class="guideBox">
+					<pre class="brush: html;">
+					</pre>
+				</div>
+				`;
+
+				const $guideElement = $('.guideElement');
+				$guideElement.each(function(){
+					$(this).after(gBox);
+					const $element = $(this).html();
+					$(this).next().children('pre').html($element);
+				});
+
+			});
+		})(jQuery);
+	</script>
+
+	<script type="text/javascript" src="../code/scripts/shCore.js"></script>
+	<script type="text/javascript" src="../code/scripts/shBrushBash.js"></script>
+	<script type="text/javascript" src="../code/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="../code/scripts/shBrushJava.js"></script>
+	<script type="text/javascript" src="../code/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="../code/scripts/shBrushXml.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="../code/styles/shCore.css" />
+	<link type="text/css" rel="stylesheet" href="../code/styles/shThemeDefault.css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+
+	<!-- 구현 페이지 js -->
+	<script src="../../js/common_ui.js"></script>
+	<!-- <script src="../../js/libs/jquery.selectric.min.js"></script> -->
+	<!-- 구현 페이지 js -->
+
+	<style>
+		body {
+			padding-top: 80px;
+		}
+	</style>
+
+</head>
+<body>
+    <div class="maping">
+		<a href="template.html">Component</a>
+		<a href="template_element.html">Element</a>
+		<a href="template_layout.html">Layout</a>
+	</div>

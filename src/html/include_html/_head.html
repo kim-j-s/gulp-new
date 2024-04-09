@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="title" content="밀레 공식 온라인몰">
+  <meta name="description" content="WELCOME TO MOUNTAIN, 프랑스 정통 아웃도어 밀레의 신상품을 확인해보세요.">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="밀레 공식 온라인몰">
+  <meta property="og:description" content="WELCOME TO MOUNTAIN, 프랑스 정통 아웃도어 밀레의 신상품을 확인해보세요.">
+
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+
+  @@if (context.page_main === true){
+    <title>@@title</title> 
+  }
+  @@if (context.page_main === false){
+    <title>@@title | 밀레</title>
+  }
+
+  <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/libs/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/common.css">
+  @@if (context.mainCss === true){
+    <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
+  }
+  <script src="../../js/libs/jquery-1.9.1.js"></script>
+  <script src="../../js/libs/swiper-bundle.min.js"></script>
+  <script src="../../js/common_ui.js"></script>
+  @@if (context.mainScript === true){
+    <script src="../../js/main.js"></script>
+  }
+</head>

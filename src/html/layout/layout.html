@@ -1,0 +1,65 @@
+@@include("_head.html",{
+"title" : "프로스펙스 | 서브 기본 레이아웃"
+})
+
+<body>
+  <div id="psWrap" class="sub">
+    @@include("_header.html")
+    <!-- Main -->
+    <main>
+      <div class="ps-inner">
+        <h3 class="ps-subtitle font-eng font-bold">Sub Title</h3>
+        <div style="height: 400px; background: #ddd;"></div>
+
+        <div class="ps-sub-content">
+          <div class="flex items-center justify-between">
+            <h4 class="ps-title-type1 font-bold">서브 타이틀</h4>
+            <select name="" id="" class="ps-select">
+              <option value="">오리지널 스택스 TR</option>
+              <option value="">블레이드 BX</option>
+              <option value="">오리지널 스택스 TR</option>
+              <option value="">블레이드 BX</option>
+              <option value="">오리지널 스택스 TR</option>
+            </select>
+          </div>
+          <div style="height: 400px; background: #ddd;"></div>
+        </div>
+
+        <div class="ps-sub-content">
+          <div class="flex items-center justify-between">
+            <h4 class="ps-title-type1 font-bold">서브 타이틀</h4>
+          </div>
+          <div style="height: 400px; background: #ddd;"></div>
+        </div>
+      </div>
+
+      <div class="py-5"></div>
+
+      <div class="ps-inner--small">
+        <div class="ps-cont-head">
+          <h4 class="font-bold">컨텐츠 헤더</h4>
+          <small class="small-desc self-end">문구</small>
+        </div>
+      </div>
+
+
+    </main>
+    <!--// Main -->
+    @@include('_footer.html')
+  </div>
+  <script>
+    // AOS.init({
+    //   disable: function msieversion() {
+    //     return !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
+    //       /Trident.*rv\:11\./))
+    //   }
+    // });
+    // $(function () {
+    //   setTimeout(function () {
+    //     AOS.refresh();
+    //   }, 100);
+    // })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+/* page */
+
+.content-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .front {
+
+  }
+  .units {
+
+  }
+}
+
+.item {
+  &-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -10px;
+  }
+  position: relative;
+  width: calc(100% / 4 - 20px);
+  margin: 0 10px;
+  margin-top: 40px;
+  border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  &:nth-child(-n + 4) {
+    margin-top: 0;
+  }
+
+  > a {
+    figure {
+      position: relative;
+      .thumb {
+        height: 335px;
+        overflow: hidden;
+      }
+      img {
+        transform: scale(1);
+        transition: .3s;
+      }
+    }
+    figcaption {
+      background-color: red;
+    }
+    &:hover {
+      figure {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+}
+
+/* page */
