@@ -16,7 +16,7 @@ const fileinclude = require('gulp-file-include');
 // 배포 시 html 정리
 const prettyHtml = require('gulp-pretty-html');
 // 배포 시 html 정리
-const beautify = require('gulp-beautify');
+const prettify = require('gulp-html-prettify');
 // npm sass
 const sass = require('gulp-sass')(require('sass'));
 // -webkit
@@ -61,7 +61,7 @@ function devHTML() {
 		// 	indent_size: 2,
 		// 	indent_with_tabs: true
 		// }))
-    .pipe(beautify.js({ indent_size: 2 }))
+    .pipe(prettify({indent_char: ' ', indent_size: 2}))
     .pipe( cache('html') ) 
     .pipe(dest(options.paths.dist.base))
     .pipe(count('<%= counter %> HTML files', {logFiles: true}));
